@@ -52,12 +52,12 @@ class AjaxContactForm extends ContactForm
 						if (data == 'false') {
 							$(form).prepend(('<div class=\"alert-box alert\">Vyplnili ste správne antispam otázku?<a href=\'\' class=\'close\'>&times;</a></div>'));
 							var dataLayer = window.dataLayer = window.dataLayer || [];
-							dataLayer.push({'event' : 'formSubmitted', 'formName': 'AjaxContactForm', 'formState': 'fail'});
+							dataLayer.push({'event': 'gaEvent', 'gaEventCategory': 'Forms', 'gaEventAction': 'Submit','gaEventLabel': 'AjaxContactFormSubmit','gaEventValue': 0});
 							sbutton.removeClass('secondary').prop('value', currentValue);
 						} else {
 							$(form).html(('<div class=\"alert-box success\">' + data + '</div>'));
 							var dataLayer = window.dataLayer = window.dataLayer || [];
-							dataLayer.push({'event' : 'formSubmitted', 'formName': 'AjaxContactForm', 'formState': 'ok'});
+							dataLayer.push({'event': 'gaEvent', 'gaEventCategory': 'Forms', 'gaEventAction': 'Submit','gaEventLabel': 'AjaxContactFormSubmit','gaEventValue': 1});
 							setTimeout(function(){\$('.reveal-modal').trigger('reveal:close');},5000);
 						}
 					});
