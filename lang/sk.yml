@@ -13,7 +13,7 @@ sk:
   ContactForm:
     SEND: 'Odoslať'
     INTROTEXT: 'Bol vyplnený formulár na stránke.'
-    FIELDISREQUIRED: 'Pole "%s" je povinné!'
+    FIELDISREQUIRED: 'Vyplňte aj toto políčko, prosím!'
     ANTISPAM_Q1: 'Antispam: koľko je 29 mínus Sedem (uveďte číslo)'
     ANTISPAM_A1: '22'
     ANTISPAM_Q2: 'Antispam: koľko je 55 mínus Štyri (uveďte číslo)'

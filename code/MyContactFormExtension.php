@@ -34,7 +34,8 @@ class MyContactFormExtension extends DataExtension
                             ->setAttribute('minlength', 20)
                             ->setAttribute('required', true)
                     )
-                    //->updateValidation("Name", array ('email' => true))
+                    ->updateValidation("Name", array ('required' => true))
+                    ->updateValidation("Question", array ('required' => true))
                     // You can add fields as strings, too.
                    // ->addField("Otázka//Textarea")
                     ->setSuccessMessage($this->owner->ContactFormData("SuccessMessage"))
